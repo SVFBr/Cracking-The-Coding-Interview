@@ -19,21 +19,19 @@ import java.util.Scanner;
  */
 
 public class Solution {
-	// Recebendo: o array, total de giros, tamanho do array
-	private void giroAEsquerda(int[] a, int k, int n) {
+	private void giroAEsquerda(int[] array, int quantidadeDeGiros, int tamanhoArray) {
 		int i;
-		for (i = 0; i < k; i++) {
-			giroAEsquerdaPorUm(a, n);
+		for (i = 0; i < quantidadeDeGiros; i++) {
+			giroAEsquerdaPorUm(array, tamanhoArray);
 		}
 	}
 
-	// Recebendo: o array, tamanho do array
-	private void giroAEsquerdaPorUm(int[] a, int n) {
+	private void giroAEsquerdaPorUm(int[] array, int tamanhoArray) {
 		int i, temp;
-		temp = a[0];
-		for (i = 0; i < n - 1; i++)
-			a[i] = a[i + 1];
-		a[i] = temp;
+		temp = array[0];
+		for (i = 0; i < tamanhoArray - 1; i++)
+			array[i] = array[i + 1];
+		array[i] = temp;
 	}
 
 	private void imprimeArray(int[] a, int n) {
@@ -48,23 +46,20 @@ public class Solution {
 
 		Scanner in = new Scanner(System.in);
 
-		// n: tamanho do array
-		int n = in.nextInt();
+		int tamanhoArray = in.nextInt();
 
-		// k: total de giros
-		int k = in.nextInt();
+		int quantidadeDeGiros = in.nextInt();
 
-		// a: valores inputatos no array
-		int a[] = new int[n];
-		for (int a_i = 0; a_i < n; a_i++) {
-			a[a_i] = in.nextInt();
+		int array[] = new int[tamanhoArray];
+		for (int a_i = 0; a_i < tamanhoArray; a_i++) {
+			array[a_i] = in.nextInt();
 		}
 
 		// Passando: o array, total de giros, tamanho do array
-		solution.giroAEsquerda(a, k, n);
+		solution.giroAEsquerda(array, quantidadeDeGiros, tamanhoArray);
 
 		// Passando: o array, tamanho do array
-		solution.imprimeArray(a, n);
+		solution.imprimeArray(array, tamanhoArray);
 
 	}
 
