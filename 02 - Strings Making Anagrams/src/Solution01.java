@@ -2,10 +2,7 @@ import java.util.Scanner;
 
 public class Solution01 {
 
-	public static int numberNeeded(StringBuilder primeira, StringBuilder segunda, int tamanhoPrimeira,
-			int tamanhoSegunda) {
-
-		int somaTamanhos = tamanhoPrimeira + tamanhoSegunda;
+	public static int numberNeeded(StringBuilder primeira, StringBuilder segunda, int somaTamanhos) {
 
 		StringBuilder terceira = new StringBuilder("");
 
@@ -21,7 +18,6 @@ public class Solution01 {
 				i--;
 			}
 		}
-
 		return somaTamanhos - (terceira.length() * 2);
 	}
 
@@ -30,7 +26,7 @@ public class Solution01 {
 		Scanner in = new Scanner(System.in);
 		StringBuilder primeira = new StringBuilder(in.next());
 		StringBuilder segunda = new StringBuilder(in.next());
-
-		System.out.println(numberNeeded(primeira, segunda, primeira.length(), segunda.length()));
+		int somaTamanhos = primeira.length() + segunda.length();
+		System.out.println(numberNeeded(primeira, segunda, somaTamanhos));
 	}
 }
