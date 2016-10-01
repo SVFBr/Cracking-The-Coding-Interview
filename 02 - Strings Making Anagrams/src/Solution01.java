@@ -2,38 +2,35 @@ import java.util.Scanner;
 
 public class Solution01 {
 
-	public static int numberNeeded(StringBuilder first, StringBuilder second, int aTamaho, int bTamanho) {
+	public static int numberNeeded(StringBuilder primeira, StringBuilder segunda, int tamanhoPrimeira,
+			int tamanhoSegunda) {
 
-		StringBuilder stringContadora = new StringBuilder("");
-		int contagem = 0;
+		int somaTamanhos = tamanhoPrimeira + tamanhoSegunda;
+				
+		StringBuilder terceira = new StringBuilder("");
 
-		for (int i = 0; i < first.length() && i < second.length(); i++) {
-			String z = "" + (second.charAt(i));
-
-			if (first.indexOf(z) != -1) {
-				first = first.deleteCharAt(first.indexOf(z));
-				second = second.deleteCharAt(i);
+		for (int i = 0; i < primeira.length() && i < segunda.length(); i++) {
+			String z = "" + (segunda.charAt(i));
+			if (primeira.indexOf(z) != -1) {
+				primeira = primeira.deleteCharAt(primeira.indexOf(z));
+				segunda = segunda.deleteCharAt(i);
 				i--;
-				stringContadora.append(z);
+				terceira.append(z);
 			} else {
-				second = second.deleteCharAt(i);
+				segunda = segunda.deleteCharAt(i);
 				i--;
 			}
 		}
 
-		return aTamaho + bTamanho - stringContadora.length() - stringContadora.length();
-
+		return somaTamanhos - terceira.length() - terceira.length();
 	}
 
 	public static void main(String[] args) {
 
 		Scanner in = new Scanner(System.in);
-		String a = in.nextLine();
-		String b = in.nextLine();
+		StringBuilder primeira = new StringBuilder(in.next());
+		StringBuilder segunda = new StringBuilder(in.next());
 
-		StringBuilder first = new StringBuilder(a);
-		StringBuilder second = new StringBuilder(b);
-
-		System.out.println(numberNeeded(first, second, a.length(), b.length()));
+		System.out.println(numberNeeded(primeira, segunda, primeira.length(), segunda.length()));
 	}
 }
