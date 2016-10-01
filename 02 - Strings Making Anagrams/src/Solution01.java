@@ -6,7 +6,7 @@ public class Solution01 {
 			int tamanhoSegunda) {
 
 		int somaTamanhos = tamanhoPrimeira + tamanhoSegunda;
-				
+
 		StringBuilder terceira = new StringBuilder("");
 
 		for (int i = 0; i < primeira.length() && i < segunda.length(); i++) {
@@ -22,7 +22,7 @@ public class Solution01 {
 			}
 		}
 
-		return somaTamanhos - terceira.length() - terceira.length();
+		return somaTamanhos - (terceira.length() * 2);
 	}
 
 	public static void main(String[] args) {
