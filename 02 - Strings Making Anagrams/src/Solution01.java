@@ -28,8 +28,8 @@ public class Solution01 {
 	public static void main(String[] args) {
 
 		Scanner in = new Scanner(System.in);
-		String a = "tabu";
-		String b = "ripa";
+		String a = in.nextLine();
+		String b = in.nextLine();
 
 		StringBuilder first = new StringBuilder(a);
 		StringBuilder second = new StringBuilder(b);
