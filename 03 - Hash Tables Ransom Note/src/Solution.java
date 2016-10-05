@@ -5,11 +5,8 @@ import java.util.Map.Entry;
 import java.util.Scanner;
 
 /**
- * 
- * Usuário digita quantidade de HashMap que deverão ser lidas e número de
- * entradas identicas que deverão ser contatadas
- * 
- * 
+ * Usuario digita quantidade de HashMaps que deverao ser lidos e numero de
+ * entradas identicas que deverao ser contadas.
  */
 
 
