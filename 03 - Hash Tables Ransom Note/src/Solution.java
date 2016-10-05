@@ -1,7 +1,17 @@
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Scanner;
+
+/**
+ * 
+ * Usuário digita quantidade de HashMap que deverão ser lidas e número de
+ * entradas identicas que deverão ser contatadas
+ * 
+ * 
+ */
+
 
 public class Solution {
 
