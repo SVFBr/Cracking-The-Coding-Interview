@@ -10,15 +10,16 @@ public class Solution {
 
 	public static void main(String[] args) {
 
-		contagem("jambo treme treme janeiro jambo");
+		contagem("a a a b b c");
 	}
 
 	public static void contagem(String palavras) {
-		String[] splitPalavra = palavras.split(" ");
+		String[] elementos = palavras.split(" ");
 		HashMap<String, Integer> registroPalavras = new LinkedHashMap<String, Integer>();
 
-		for (String palavra : splitPalavra) {
-			registroPalavras.put(palavra, (registroPalavras.get(palavra) == null ? 1 : (registroPalavras.get(palavra) + 1)));
+		for (String palavra : elementos) {
+			registroPalavras.put(palavra,
+					(registroPalavras.get(palavra) == null ? 1 : (registroPalavras.get(palavra) + 1)));
 		}
 
 		System.out.println(registroPalavras);
