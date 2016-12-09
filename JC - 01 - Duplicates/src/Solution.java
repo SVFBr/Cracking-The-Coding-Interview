@@ -3,7 +3,7 @@ import java.util.LinkedHashMap;
 
 /**
  * 1) Write a java program to find the duplicate words and their number of
- * occurrences in a string?
+ * occurrences in a string??
  */
 
 public class Solution {
